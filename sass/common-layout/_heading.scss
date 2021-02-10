@@ -22,6 +22,10 @@
   -webkit-background-clip: text;
   color: transparent;
   animation-name: moveInLeft;
+
+  @include respond(bg-phone) {
+    letter-spacing: 2rem;
+  }
 }
 
 .heading__big {

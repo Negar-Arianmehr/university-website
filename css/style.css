@@ -344,6 +344,9 @@ li {
   -webkit-background-clip: text;
   color: transparent;
   animation-name: moveInLeft; }
+  @media only screen and (max-width: 50em) {
+    .heading__hug {
+      letter-spacing: 2rem; } }
 
 .heading__big {
   font-size: 3.5rem;
@@ -479,11 +482,9 @@ li {
   grid-column: start-center/ end-center; }
   .home-header__content {
     display: grid;
-    grid-template-rows: minmax(2rem, 8rem) min-content min-content min-content max-content;
-    row-gap: 2rem;
+    grid-template-rows: minmax(2rem, 10vh) min-content min-content min-content max-content;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
     padding: 2.5rem; }
     .home-header__content h2 {
       grid-row: 2/3; }
@@ -613,18 +614,15 @@ li {
     margin-bottom: 1.75rem; }
     .news__content:hover {
       background-color: #e5e5e5; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 50em) {
       .news__content {
         flex-direction: column; } }
-  @media only screen and (max-width: 50em) {
-    .news__reverse {
-      flex-direction: row-reverse;
-      justify-content: flex-end;
-      background-color: #f4f4f4;
-      margin-right: 2rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .news__reverse {
-      flex-direction: column; } }
+  .news__reverse {
+    flex-direction: row-reverse; }
+    @media only screen and (max-width: 50em) {
+      .news__reverse {
+        margin-right: 2rem;
+        flex-direction: column; } }
   .news__img-box {
     flex: 0 0 26%;
     height: 20rem;
@@ -632,24 +630,30 @@ li {
     object-fit: cover; }
     @media only screen and (max-width: 50em) {
       .news__img-box {
-        flex: 0 0 25vw; } }
+        flex: 0 0 25vw;
+        text-align: center; } }
   .news__img {
     display: inline-block;
     height: 100%;
     width: 100%; }
   .news__img-right {
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%); }
+    @media only screen and (max-width: 50em) {
+      .news__img-right {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+        width: 65%; } }
   .news__img-left {
     clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%); }
     @media only screen and (max-width: 50em) {
       .news__img-left {
-        clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%); } }
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+        width: 65%; } }
   .news__text-box {
     font-size: 1.6rem;
     color: #666;
     display: flex;
     flex-direction: column;
-    height: 20rem;
+    height: max-content;
     overflow: hidden;
     text-overflow: ellipsis; }
     .news__text-box h2 {
@@ -661,7 +665,8 @@ li {
     display: inline-block;
     font-weight: 700;
     color: #051131;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    margin-top: 1.75rem; }
 
 .pagination {
   margin-top: 1.75rem;
@@ -677,6 +682,9 @@ li {
     transition: background-color .3s;
     border: 1px solid #ddd;
     margin: 0 4px; }
+    @media only screen and (max-width: 50em) {
+      .pagination a {
+        padding: 6px 12px; } }
   .pagination a:hover:not(.active) {
     background-color: #cccccc; }
   .pagination a.active {
@@ -700,13 +708,13 @@ li {
   .team__cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    min-width: 100%;
-    height: 28vh; }
+    height: 28vh;
+    margin-bottom: 2.5rem; }
   .team__card {
     height: 30rem;
     max-width: 30rem;
     text-align: center;
-    margin: 0 5rem;
+    margin: 2.5rem 5rem;
     box-shadow: 0 0.5rem 20rem rgba(0, 0, 0, 0.5);
     transition: .3s ease-in-out; }
     .team__card:hover {
