@@ -1,0 +1,66 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    //both means right and left
+    clear: both;
+  }
+}
+
+
+//MEDIA QUERY MANAGER
+/*
+0-600px:    phone
+60-900px:   tablet portrait
+900-1200px: tablet landscape
+[1200-1800] is where our normal styles apply
+1800px + :  Big Desktop
+
+$breakpoint arguement choices:
+-phone
+-tab-port
+-tab-land
+-big-desktop
+ */
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content
+    }
+    //600px >>>>600/16 = 73.5em
+  }
+
+  @if $breakpoint == bg-phone {
+    @media only screen and (max-width: 50em) {
+      @content
+    }
+    //800px >>>>800/16 = 50em
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content
+    }
+    //900px >>>>900/16 = 56.25em
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content
+    }
+    //1200px >>>>1200/16 = 75em
+  }
+
+  @if $breakpoint == med-desktop {
+    @media only screen and (max-width: 88em) {
+      @content
+    }
+    //1400px >>>>1400/16 = 87,5em
+  }
+
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content
+    }
+    //1800px >>>>1800/16 = 112.5em
+  }
+}

@@ -1,0 +1,270 @@
+.header {
+  span {
+    visibility: hidden;
+  }
+
+  grid-row: 1/ 2;
+  grid-column: start-center/ end-center;
+
+  &__bg-color {
+    //background-color: $color-main;
+    background-image: linear-gradient(to right, $color-main-dark, $color-main-light);
+  }
+
+  &__logo-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.75rem;
+    margin: 0 2rem;
+  }
+
+  &__img {
+    height: 5rem;
+    width: auto;
+  }
+
+  &__search {
+    flex: 0 0 90%;
+    //for extending the input for search box in two sides
+    display: flex;
+    justify-content: flex-end;
+    justify-items: center;
+
+    @include respond(bg-phone) {
+      flex: 0 0 30%;
+      justify-content: space-between;
+    }
+
+    &--btn {
+      outline: none;
+      border: none;
+      background-color: transparent;
+      transition: all .2s;
+
+      &:focus,
+      &:hover {
+        transform: scale(1.1);
+        fill: $color-main-light;
+        outline: none;
+        animation: pulsate 1s infinite;
+      }
+    }
+
+    &--input {
+      font-size: 1.25rem;
+      font-family: inherit;
+      width: max-content;
+      border: 1px solid $color-gray-light;
+      border-radius: 100px;
+      outline: none;
+      padding: .75rem 2rem;
+      vertical-align: text-bottom;
+      transition: all .2s;
+
+      &:focus {
+        width: 50%;
+      }
+    }
+
+    &--svg {
+      height: 2.5rem;
+      width: 4rem;
+      fill: $color-main-dark;
+    }
+  }
+
+  &__nav {
+    //grid-row: 2/3;
+    //grid-column: center-start/ center-end;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    //display: flex;
+    //justify-content: space-between;
+    //align-items: center;
+    //
+    //@include respond(bg-phone) {
+    //  display: none ;
+    //}
+  }
+
+  &__nav--list {
+    list-style: none;
+    color: $color-gray-dark;
+    margin-left: 2.75rem;
+  }
+
+  &__nav--item {
+    display: inline-block;
+    margin-right: 3.5rem;
+    position: relative;
+  }
+
+  &__nav--link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      //color: $color-gray-light-2;
+      background-image: linear-gradient(to right, $color-gray-light-3, $color-gray-light-1);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    &::before {
+      content: "";
+      color: #141414;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: max-content;
+      border-bottom: .5px solid $color-main-dark;
+      transition: all .6s;
+    }
+
+    &:hover::before,
+    &:active {
+      width: 100%;
+      height: max-content;
+      box-shadow: 0 1px 1rem $color-black;
+      border-top: 1px solid $color-gray-light;
+      background-image: url("img/background.png");
+    }
+   //a:hover:not(.active) {background-color: #ddd;}
+    &__active {
+      color: $color-white !important;
+    }
+  }
+}
+
+////////////////////////////////////////
+/////////////nav-toggle//////////////
+///////////////////////////////////////
+@include respond(bg-phone) {
+  span {
+    visibility: visible !important;
+  }
+
+  nav {
+    display: none;
+  }
+
+  li a {
+    margin: 1.75rem;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .nav-toggle {
+    background-color: rgba($color-gray-dark, .95);
+    position: fixed;
+    //top: 0;
+    right: 0;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 5rem;
+    z-index: 100;
+    animation-name: moveToDown;
+    animation-duration: .2s;
+    transition: all .4s;
+
+    &:hover,
+    &:active {
+
+    }
+  }
+
+  .toggle-icon-box {
+    height: 6rem;
+    width: 6rem;
+    background-color: $color-gray-light-1;
+    border-radius: 50%;
+    align-items: center;
+  }
+
+  .toggle-icon {
+    border: none;
+    border-radius: 0;
+    background-color: $color-main;
+    height: 2px;
+    width: 3rem;
+    margin-bottom: 2rem;
+    outline: none;
+    transform: translate(1.5rem, 1.75rem);
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      display: inline-block;
+      border: none;
+      border-radius: 0;
+      background-color: $color-main;
+      height: 2px;
+      width: 3rem;
+    }
+
+    &::before {
+      //transform: translateY(-1rem);
+    }
+
+    &::after {
+      transform: translateY(-5px);
+    }
+
+    &:hover .toggle-icon::before {
+      transform: translateY(-5px);
+    }
+
+    &:hover .toggle-icon::after {
+      transform: translateY(-5px);
+    }
+  }
+
+  .close-icon {
+    border: none;
+    border-radius: 0;
+    display: inline-block;
+    background-color: transparent;
+    height: 2px;
+    width: 3rem;
+    margin-right: 1.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+    transform: translate(-1px, 1.6rem);
+
+    &::before,
+    &::after {
+      content: "";
+      display: inline-block;
+      border: none;
+      border-radius: 0;
+      background-color: $color-main;
+      height: 2px;
+      width: 3rem;
+      outline: none;
+      position: absolute;
+      top: 0;
+    }
+
+    &::before {
+      transform: rotate(-135deg);
+    }
+
+    &::after {
+      transform: rotate(135deg);
+    }
+  }
+}
+
+
+
+
+

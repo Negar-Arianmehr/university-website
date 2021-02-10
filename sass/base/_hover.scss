@@ -1,0 +1,76 @@
+.hover {
+  //&:hover {
+  //  transform: translateY(-10px);
+  //}
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: auto;
+    background: rgba(255,255,255, .5);
+    transform: skewX(75deg) translateX(150px);
+    transition: all .5s;
+  }
+
+  &:hover::before {
+    transform: skewX(45deg) translateX(-150px);
+  }
+}
+
+.hover2 {
+  &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: rgba($color-gray-light-1, .5);
+      transform: skewX(75deg) translateX(-150px);
+      transition: all .5s;
+      opacity: 0;
+      //it is for a weird animation error
+      backface-visibility: hidden;
+    }
+
+  &:hover::before {
+      transform: skewX(45deg) translateX(60rem);
+      width: 25%;
+      opacity: 1;
+    }
+  /////////////////////////////////////////////////////////
+  //new hover
+   &__nav--link {
+     &:link,
+     &:visited {
+       text-decoration: none;
+       color: $color-gray-light-2;
+     }
+
+     &::before {
+       content: "";
+       color: #141414;
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       width: 0;
+       height: max-content;
+       //border-bottom: .5px solid $color-black;
+       border-bottom: .5px solid $color-main-dark;
+       transition: all .6s;
+     }
+
+     &:hover::before,
+     &:active,
+     &__active {
+       width: 100%;
+       height: max-content;
+       box-shadow: 0 1px 1rem $color-black;
+       border-top: 1px solid $color-gray-light;
+       background-image: url("img/background.png");
+       padding: 1.75rem;
+     }
+   }}

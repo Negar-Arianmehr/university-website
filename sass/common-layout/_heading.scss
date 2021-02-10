@@ -1,0 +1,52 @@
+.heading {
+  font-weight: 700;
+  font-family: $font-family-simple;
+  text-transform: uppercase;
+  display: inline-block;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: .2s;
+}
+
+.heading-capl {
+  font-weight: 700;
+  font-family: $font-family-simple;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.heading__hug {
+  font-size: 6rem;
+  letter-spacing: 3.5rem;
+  background-image: linear-gradient(to right, $color-main-light, $color-main-dark);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation-name: moveInLeft;
+}
+
+.heading__big {
+  font-size: 3.5rem;
+  letter-spacing: .1rem;
+  background-image: linear-gradient(to right, $color-main-light, $color-main-dark);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation-name: moveInRight;
+  margin-bottom: 2.2rem;
+}
+
+.heading__medium {
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  animation-name: moveInRight;
+}
+
+.heading__small {
+  font-size: 1.6rem;
+  display: inline-block;
+  animation-name: moveInRight;
+}
+
+.heading-center-margin {
+  margin-top: 1.75rem;
+  text-align: center;
+}

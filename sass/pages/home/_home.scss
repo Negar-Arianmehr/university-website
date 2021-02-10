@@ -1,0 +1,452 @@
+//<!--/*............................*/-->
+//<!--/*            home-header     */-->
+//<!--/*............................*/-->
+.home-header {
+  background-image: linear-gradient(to right bottom, rgba($color-secondary-dark, .5), rgba($color-secondary-light, .5)), url("../../../img/background.png");
+  height: 80vh;
+  background-position: top;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+
+  grid-row: 2/3;
+  grid-column: start-center/ end-center;
+
+  &__content {
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: center;
+    //align-items: center;
+    display: grid;
+    grid-template-rows: minmax(2rem, 8rem) min-content min-content min-content max-content;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 2.5rem;
+
+    h2 {
+      grid-row: 2/3;
+      //justify-self: center;
+    }
+
+    h1 {
+      grid-row: 3/4;
+      //justify-self: center;
+    }
+
+    a {
+      margin-top: 3.75rem;
+      //justify-self: center;
+    }
+
+  }
+
+  &__btn {
+    grid-row: 4/5;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: .2s;
+  }
+}
+
+//<!--/*............................*/-->
+//<!--/* achievement-description   */-->
+//<!--/*............................*/-->
+.main {
+  grid-row: 3/4;
+  grid-column: start-center/ end-center;
+  padding: 11vh 1rem 2rem 0;
+  justify-content: center;
+
+  //@include respond(med-desktop) {
+  //  padding-top: 9.5rem;
+  //}
+}
+
+.achievement {
+  text-align: center;
+  padding: 0 10rem 2.5rem 10rem;
+
+  & > * {
+    margin: 2.75rem 0;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    grid-gap: 7rem;
+    align-items: start;
+    justify-content: start;
+  }
+
+  &__card {
+    background-color: $color-gray-light-1;
+    height: 50rem;
+    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2rem 1.5rem rgba($color-black, .5);
+
+    display: grid;
+    grid-template-rows: min-content max-content 1fr 1fr;
+  }
+
+  &__img-box {
+    height: 23rem;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__heading {
+    background-color: $color-main-light;
+    transform: translateY(-30%) skew(20deg);
+    margin: 0 2rem;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    padding: 0 2rem;
+    height: 10rem;
+    overflow: auto;
+    //object-fit: cover;
+    //text-overflow: ellipsis;
+    //display: -webkit-box;
+    //-webkit-line-clamp: 4; /* number of lines to show */
+    //-webkit-box-orient: vertical;
+  }
+
+  &__card-btn {
+    margin-top: 1.75rem;
+  }
+
+  &__btn {
+    margin-top: 3.5rem;
+  }
+}
+
+//<!--/*............................*/-->
+//<!--/*         description        */-->
+//<!--/*............................*/-->
+.description {
+  grid-row: 3/4;
+  grid-column: start-center/ end-center;
+
+  background-color: $color-gray-light-1;
+  display: grid;
+  grid-template-columns: minmax(2rem, 5rem) min-content 1fr minmax(2rem, 5rem);
+
+  @include respond(tab-land) {
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  &__img-box {
+    grid-column: 2/3;
+    align-self: center;
+    height: 40vh;
+    width: auto;
+    padding: 2rem;
+
+    @include respond(tab-land) {
+      height: 35rem;
+    }
+    @include respond(tab-port) {
+      //height: 20rem;
+      grid-column: 2/-1;
+      grid-row: 1/-1;
+      justify-self: start;
+      opacity: .2;
+    }
+  }
+
+  &__img {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+
+    @include respond(tab-land) {
+      //clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+      width: 26rem;
+    }
+  }
+
+  &__text-box {
+    grid-column: 3/4;
+    font-size: 1.6rem;
+    padding: 3.5rem;
+
+    div:not(:last-child) {
+      margin-bottom: 1.25rem;
+    }
+
+    @include respond(tab-port) {
+      grid-row: 1/2;
+      color: $color-black;
+      font-weight: 600;
+    }
+  }
+
+  &__heading-2 {
+    display: block;
+  }
+
+  &__btn-box {
+    margin-top: 2.3rem;
+      @include respond(tab-port) {
+        text-align: center;
+      }
+  }
+}
+
+//<!--/*............................*/-->
+//<!--/*         news               */-->
+//<!--/*............................*/-->
+
+.news {
+  grid-row: 4/5;
+  grid-column: start-center/ end-center;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.75rem;
+    @include respond(tab-port) {
+      margin: 0 2.5rem;
+      //padding: 0 2.5rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    margin-bottom: 1.75rem;
+
+    &:hover {
+      background-color: $color-gray-light-2;
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__reverse {
+    @include respond(bg-phone) {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      background-color: $color-gray-light-1;
+      margin-right: 2rem;
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__img-box {
+    flex: 0 0 26%;
+    height: 20rem;
+    width: auto;
+    object-fit: cover;
+
+    @include respond(bg-phone) {
+      flex: 0 0 25vw;
+    }
+  }
+
+  &__img {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__img-right {
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+    @include respond(bg-phone) {
+      //margin-left: -10rem;
+      //opacity: .2;
+    }
+  }
+
+  &__img-left {
+    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+    @include respond(bg-phone) {
+      clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+      //margin-left: -10rem;
+      //opacity: .2;
+    }
+  }
+
+  &__text-box {
+    font-size: 1.6rem;
+    color: $color-gray-dark-1;
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    h2 {
+      margin-bottom: 1.75rem;
+    }
+
+    //@include respond(tab-port) {
+    //  flex: 0 0 80vw;
+    //}
+
+    @include respond(bg-phone) {
+      color: $color-black;
+    }
+
+  }
+
+  &__continue {
+    display: inline-block;
+    font-weight: 700;
+    color: $color-secondary-dark;
+    text-transform: capitalize;
+  }
+
+}
+
+////**************pagination********************
+
+.pagination {
+  margin-top: 1.75rem;
+  text-align: center;
+
+  &__nums {
+    display: inline-block;
+  }
+
+  a {
+    color: black;
+    font-size: 1.4rem;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+  }
+
+  a:hover:not(.active) {
+    background-color: $color-gray-light-3;
+  }
+
+  a.active {
+    background-color: $color-secondary;
+    color: white;
+    border: 1px solid $color-gray-light-2;
+  }
+
+
+}
+
+//<!--/*............................*/-->
+//<!--/*         team               */-->
+//<!--/*............................*/-->
+.team {
+  grid-row: 5/6;
+  grid-column: start-center/ end-center;
+  height: 50vh;
+  margin: 3.5rem 0;
+  background-color: #000;
+
+  &:hover {
+    height: 70vh;
+  }
+
+  @media screen and (max-width: 1600px) {
+    height: 70vh;
+
+    &:hover {
+      height: 90vh;
+    }
+  }
+
+
+  &__cards {
+    display: grid;
+    //justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    //grid-template-rows: minmax(2rem, 5rem) max-content minmax(2rem, 5rem);
+    //grid-gap: 7rem;
+    min-width: 100%;
+    height: 28vh;
+  }
+
+  &__card {
+    height: 30rem;
+    //height: 42rem;
+    max-width: 30rem;
+    text-align: center;
+    margin: 0 5rem;
+
+    //margin: 1.5rem 2rem;
+    //    padding: 2rem 1.5rem;
+    box-shadow: 0 .5rem 20rem rgba($color-black, .5);
+    transition: .3s ease-in-out;
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: center;
+    //align-items: center;
+
+    &:hover {
+      height: 42rem;
+      background-color: $color-main;
+    }
+
+    @include respond(bg-phone) {
+      width: 90%;
+      max-width: 90%;
+    }
+  }
+
+  &__img-box {
+    height: 26rem;
+    width: 26rem;
+    display: inline-block;
+    //position: relative;
+    border: 1.5rem solid $color-main;
+    //top: -6rem;
+    //left: 2rem;
+    z-index: 1;
+    text-align: center;
+    //box-shadow: 0 .5rem 2rem rgba($color-black, .2);
+  }
+
+  &__img {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+  }
+
+  &__text-box {
+    font-size: 1.25rem;
+    color: $color-gray-light-2;
+    padding: 1rem;
+  }
+
+  &__text {
+    visibility: hidden;
+
+    //&:hover .team__card {
+    //  visibility: visible;
+    //}
+  }
+}
+
+.team .team__card:hover .team__text {
+  visibility: visible;
+}

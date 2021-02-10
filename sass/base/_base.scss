@@ -1,0 +1,80 @@
+//font-family: 'Dancing Script', cursive;
+//font-family: 'Lato', sans-serif;
+//font-family: 'Open Sans', sans-serif;
+//font-family: 'Roboto', sans-serif;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  min-width: 0;
+  min-height: 0;
+}
+
+html {
+  font-size: 65.5%; //1rem = 10px>>>10/16 = 62.5%
+
+  @include respond(tab-land) {
+    font-size: 56.25%; //1rem = 9px>>>9/16=
+  }
+
+  @include respond(bg-phone) {
+    font-size: 50%; //1rem = 9px>>>9/16=
+  }
+
+  @include respond(phone) {
+    font-size: 46.5%;
+  }
+
+}
+
+body {
+  font-family: $font-family-main;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-gray-dark;
+  box-sizing: border-box;
+  //padding: 0 3rem 3rem 3rem;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: min-content 70vh repeat(4, min-content);
+  grid-template-columns: [start-full] minmax(6rem, 10rem) [start-center] repeat(8, [start-col] minmax(min-content, 20rem) [end-col])
+  [end-center] minmax(6rem, 10rem)[end-full];
+
+   @include respond(tab-port) {
+    grid-template-columns: [start-center] repeat(8, [start-col] minmax(min-content, 1fr) [end-col])[end-center];
+     //grid-template-rows: 6rem calc(100vh - 6rem);
+   }
+
+  //@include respond(tab-port) {
+  //  grid-template-rows: min-content 50vh repeat(4, min-content);
+  // }
+}
+
+::selection {
+  background-color: #fff;
+  color: #000;
+}
+
+////////////////////////////
+////////HELPER class////////
+////////////////////////////
+.margin-top {
+  margin-top: 2.5rem;
+}
+.margin-bottom {
+  margin-bottom: 2rem;
+}

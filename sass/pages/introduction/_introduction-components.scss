@@ -1,0 +1,392 @@
+//*************presentation****************//
+.presentation {
+  background-image: linear-gradient(rgba($color-gray-dark, .9), rgba($color-gray-dark-3, .9)), url("../img/background.png");
+  background-size: cover;
+  background-position: top;
+
+  &__post {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    font-size: 3.75rem;
+    color: $color-secondary-light;
+    padding-left: 2.5rem;
+    transform: translateY(10%);
+
+    //@include respond(tab-port) {
+    //  grid-column: 2/3;
+    //}
+  }
+
+  &__name {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    font-size: 4.5rem;
+    color: $color-gray-light-2;
+    padding-left: 2.75rem;
+  }
+
+  &__figure {
+    grid-row: 2/ -1;
+    grid-column: 3/4;
+    justify-self: end;
+    transform: translateY(5%);
+
+    @include respond(tab-land) {
+      transform: translateY(20%);
+    }
+
+    @include respond(tab-port) {
+      grid-row: 1/span 2;
+      grid-column: 3/4;
+      //justify-self: center;
+    }
+  }
+
+  &__img {
+    box-shadow: 1rem 1rem 1.5rem rgba($color-secondary-dark, .6);
+    height: 40rem;
+    width: auto;
+    display: block;
+    //
+    //@if $breakpoint == med-desktop {
+    //  height: 35rem;
+    //  width: auto;
+    //}
+
+    //@include respond(tab-land) {
+    //  height: 30rem;
+    //  width: auto;
+    //  }
+    //
+    //@include respond(tab-port) {
+    //  height: 20rem;
+    //  width: auto;
+    //}
+  }
+
+  &__box {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: $color-secondary-dark;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+    padding-left: 4rem;
+    background-color: $color-gray-light-2;
+    box-shadow: 0 1rem 1.5rem rgba($color-secondary-dark, .5);
+    border-radius: 10px;
+    grid-row: 4/-1;
+    grid-column: 2/3;
+    transform: translateY(40%);
+
+    display: grid;
+    grid-template-columns: min-content 1fr min-content 1fr min-content 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 1rem;
+    align-items: center;
+    margin-right: 5rem;
+
+    @include respond(tab-land) {
+      grid-template-columns: min-content 1fr min-content 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      transform: translateY(20%);
+    }
+
+    @include respond(tab-port) {
+      grid-row: 4/-1;
+      grid-column: 1/-1;
+      //justify-self: start;
+      margin-left: 3rem;
+      opacity: .75;
+      padding-left: 2rem;
+    }
+
+    &--header-1 {
+      grid-row: 1/2;
+      grid-column: 1/3;
+    }
+
+    &--header-2 {
+      grid-row: 1/2;
+      grid-column: 3/5;
+      margin-left: 2rem;
+    }
+
+    &--header-3 {
+      grid-row: 1/2;
+      grid-column: 5/7;
+      margin-left: 2rem;
+
+      @include respond(tab-land) {
+        grid-row: 3/4;
+        grid-column: 3/5;
+      }
+    }
+
+    &--text-1 {
+      grid-row: 2/3;
+      grid-column: 2/3;
+    }
+
+
+    &--text-2 {
+      grid-row: 3/4;
+      grid-column: 2/3;
+    }
+
+
+    &--text-3 {
+      grid-row: 4/5;
+      grid-column: 2/3;
+    }
+
+    &--text-4 {
+      grid-row: 2/3;
+      grid-column: 4/5;
+    }
+
+    &--text-5 {
+      grid-row: 2/3;
+      grid-column: 6/7;
+
+      @include respond(tab-land) {
+        grid-row: 4/5;
+        grid-column: 4/5;
+      }
+    }
+
+    &--header {
+      text-transform: uppercase;
+    }
+
+  }
+
+
+}
+
+/////////////////////////
+///////////SVG///////////
+////////////////////////
+.svg {
+  align-self: center;
+  //margin-right: .75rem;
+  height: 1.75rem;
+  width: 2.5rem;
+  fill: $color-main-dark;
+
+  &-1 {
+    grid-column: 1/2;
+  }
+
+  &-2 {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    margin-left: 2rem;
+  }
+
+  &-3 {
+    grid-row: 2/3;
+    grid-column: 5/6;
+    margin-left: 2rem;
+
+    @include respond(tab-land) {
+        grid-row: 4/5;
+        grid-column: 3/4;
+      }
+  }
+
+}
+
+/////////////////////////
+///////////UPPERCASE///////////
+////////////////////////
+.uppercase {
+  text-transform: uppercase;
+}
+
+
+//*************PROFILE****************//
+.profile {
+  margin-top: 13.5rem;
+
+  &__research {
+    margin-bottom: 2.5rem;
+    grid-column: 2/ span 4;
+  }
+
+  &__academic {
+    margin-bottom: 2.5rem;
+    grid-column: 2/ span 4;
+  }
+
+  &__header {
+    font-size: 4.5rem;
+    line-height: 1.7;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    font-size: 1.75rem;
+  }
+
+  &__qut {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 1.5rem;
+  }
+}
+
+//*************PUBLICATION****************//
+.publication {
+  background-color: $color-gray-light-1;
+
+  //&__content {
+  //  //we give it layout
+  //  //for btn float
+  //  //@include clearfix;
+  //}
+
+  &__header-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      text-align: center;
+
+      a {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  &__header {
+    font-size: 3.5rem;
+    margin: 2rem 0;
+    display: inline-block;
+  }
+
+  &__btn {
+    text-decoration: none;
+    border: none;
+    padding: .5rem;
+    margin-left: 1.75rem;
+    background-color: transparent;
+    font-size: 2.2rem;
+    color: $color-main-dark;
+    transition: all .3s;
+    //for hover
+    position: relative;
+
+    &::before {
+      content: "";
+      margin: 0 -1rem;
+      position: absolute;
+      top: 0;
+      //left: 0;
+      width: 5px;
+      height: 100%;
+      background: rgba($color-gray-light-3, .4);
+      transform: scaleY(0);
+      transition: $slow;
+    }
+
+    &:hover::before {
+      transform: scaley(1);
+      width: 105%;
+    }
+
+    &:hover,
+    &:active {
+      transform: translateY(-2px);
+      border-radius: 4px;
+      overflow: hidden;
+      color: $color-main;
+    }
+  }
+
+  &__box {
+    background-color: $color-white;
+    padding: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__list {
+    list-style: none;
+
+  }
+
+  &__item {
+    //border-bottom: 1px solid $color-main;
+    padding: 1.75rem 2.2rem;
+    position: relative;
+    @include clearfix;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-main;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $color-secondary-light;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-gray-dark-2;
+      text-decoration: none;
+
+      display: grid;
+      grid-template-rows: repeat(3, min-content);
+    }
+  }
+
+  &__heading {
+    font-size: 2.75rem;
+    grid-row: 1/ 2;
+  }
+
+  &__journal {
+    color: $color-gray-light;
+    font-size: 1.5rem;
+    grid-row: 2/ 3;
+  }
+
+  &__name {
+    color: $color-gray-dark-1;
+    display: block;
+    grid-row: 3/4;
+  }
+
+  &__arrow {
+    grid-row: 3/4;
+    justify-self: end;
+    font-size: 1.5rem;
+    color: $color-main-dark;
+  }
+
+}
+//*************education****************//
+.education {
+  display: flex;
+  justify-content: space-around;
+  padding: 2.75rem;
+
+  @include respond(bg-phone) {
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__current {
+
+    @include respond(bg-phone) {
+      margin-bottom: 1.75rem;
+      border-bottom: 1px solid $color-gray-light;
+    }
+  }
+}
+
+
