@@ -16,14 +16,14 @@
   @include respond(bg-phone) {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, min-content);
+    column-gap: 1.5rem;
   }
 
   @include respond(phone) {
     grid-template-rows: repeat(5, min-content);
     grid-template-columns: 1fr;
-    column-gap: 0;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 
     & div:not(:last-child) {
       border-bottom: 1px solid $color-gray-light;
@@ -92,10 +92,7 @@
 
   &__header {
     font-size: 1.7rem;
-  }
-
-  &__list {
-
+    color: $color-gray;
   }
 
   &__item {
@@ -106,7 +103,6 @@
     text-decoration: none;
     font-size: 1.5rem;
     color: $color-gray-light-3;
-
   }
 
   &__link-color {
@@ -120,7 +116,7 @@
       background-color: $color-gray-light-1;
       display: inline-block;
       vertical-align: middle;
-      margin-right: 15px;
+      margin-right: 10px;
     }
   }
 

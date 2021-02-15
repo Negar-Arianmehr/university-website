@@ -438,7 +438,8 @@ li {
       .footer__content--3 {
         grid-row: 4/5; } }
   .footer__header {
-    font-size: 1.7rem; }
+    font-size: 1.7rem;
+    color: #777; }
   .footer__item {
     list-style: none; }
   .footer__link {

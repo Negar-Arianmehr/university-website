@@ -50,7 +50,7 @@ li {
 
 .container {
   display: grid;
-  grid-template-rows: min-content 70vh repeat(4, min-content);
+  grid-template-rows: min-content min-content repeat(4, min-content);
   grid-template-columns: [start-full] minmax(6rem, 10rem) [start-center] repeat(8, [start-col] minmax(min-content, 20rem) [end-col])
   [end-center] minmax(6rem, 10rem)[end-full];
 

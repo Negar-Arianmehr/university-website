@@ -1,0 +1,8 @@
+.about {
+  height: 50vh;
+  background-image: linear-gradient(to right bottom, rgba($color-main, .5), rgba($color-main-light, .5));
+  background-size: cover;
+  background-position: top;
+
+  grid-row : 2/3;
+}
