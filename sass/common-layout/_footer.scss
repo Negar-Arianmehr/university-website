@@ -16,7 +16,8 @@
   @include respond(bg-phone) {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, min-content);
-    column-gap: 1.5rem;
+    grid-gap: 1.5rem;
+    justify-content: center;
   }
 
   @include respond(phone) {
@@ -61,7 +62,6 @@
       grid-column: 2/3;
     }
 
-
   }
 
   &__content--2 {
@@ -70,6 +70,7 @@
     @include respond(bg-phone) {
       grid-row: 2/3;
       grid-column: 3/4;
+
     }
 
     @include respond(phone) {

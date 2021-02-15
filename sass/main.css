@@ -473,7 +473,8 @@ li {
   .footer {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, min-content);
-    column-gap: 1.5rem;
+    grid-gap: 1.5rem;
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -1309,12 +1310,13 @@ li {
   }
 }
 
-.about {
-  height: 50vh;
-  background-image: linear-gradient(to right bottom, rgba(177, 0, 0, 0.5), rgba(184, 25, 25, 0.5));
+.about-header {
+  height: 30vh;
+  background-image: linear-gradient(to right bottom, rgba(184, 25, 25, 0.8), rgba(70, 0, 0, 0.8)), url("../../../img/background.png");
   background-size: cover;
   background-position: top;
   grid-row: 2/3;
+  grid-column: start-center/end-center;
 }
 
 /*# sourceMappingURL=main.css.map */

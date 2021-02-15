@@ -57,7 +57,7 @@ li {
 
 .container {
   display: grid;
-  grid-template-rows: min-content 70vh repeat(4, min-content);
+  grid-template-rows: min-content min-content repeat(4, min-content);
   grid-template-columns: [start-full] minmax(6rem, 10rem) [start-center] repeat(8, [start-col] minmax(min-content, 20rem) [end-col]) [end-center] minmax(6rem, 10rem) [end-full]; }
   @media only screen and (max-width: 56.25em) {
     .container {
@@ -386,14 +386,15 @@ li {
   @media only screen and (max-width: 50em) {
     .footer {
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(3, min-content); } }
+      grid-template-rows: repeat(3, min-content);
+      grid-gap: 1.5rem;
+      justify-content: center; } }
   @media only screen and (max-width: 37.5em) {
     .footer {
       grid-template-rows: repeat(5, min-content);
       grid-template-columns: 1fr;
-      column-gap: 0;
       align-items: center;
-      justify-content: center; }
+      justify-content: start; }
       .footer div:not(:last-child) {
         border-bottom: 1px solid #999;
         grid-column: 1/-1;
@@ -456,7 +457,7 @@ li {
       background-color: #f4f4f4;
       display: inline-block;
       vertical-align: middle;
-      margin-right: 15px; }
+      margin-right: 10px; }
   .footer__copyright {
     grid-row: 2/3;
     grid-column: 1/-1;
@@ -1027,3 +1028,11 @@ li {
     .education__current {
       margin-bottom: 1.75rem;
       border-bottom: 1px solid #999; } }
+
+.about-header {
+  height: 30vh;
+  background-image: linear-gradient(to right bottom, rgba(184, 25, 25, 0.8), rgba(70, 0, 0, 0.8)), url("../../../img/background.png");
+  background-size: cover;
+  background-position: top;
+  grid-row: 2/3;
+  grid-column: start-center/ end-center; }

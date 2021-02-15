@@ -1,8 +1,13 @@
-.about {
-  height: 50vh;
-  background-image: linear-gradient(to right bottom, rgba($color-main, .5), rgba($color-main-light, .5));
+.about-header {
+  height: 30vh;
+  background-image: linear-gradient(to right bottom, rgba($color-main-light, .8), rgba($color-main-dark, .8)), url("../../../img/background.png");
   background-size: cover;
   background-position: top;
 
-  grid-row : 2/3;
+ grid-row: 2/3;
+  grid-column: start-center/ end-center;
+
+  &__content {
+
+  }
 }
