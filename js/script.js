@@ -44,7 +44,6 @@ switch (activePage) {
         document.querySelector("#contact").classList.add("header__nav--link__active");
         break
     // case "index.html" : document.querySelector("#index").classList.add("header__nav--link__active")
-
 }
 
 /*========== MEET THE TEAM CAROUSEL ==========*/

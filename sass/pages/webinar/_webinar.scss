@@ -1,0 +1,110 @@
+.webinar-header {
+  height: 50vh;
+  background-image: linear-gradient(to right bottom, rgba($color-secondary, .8), rgba($color-main, .8)), url("../img/bg.webinar.jpg");
+  background-position: top;
+  background-size: cover;
+
+   @media only screen and (max-width: 600px){
+     height: 45vh;
+   }
+}
+
+///////////////////////////////
+//grid-webinar
+///////////////////////////////
+.webinar {
+  display: grid;
+  grid-template-rows: repeat(2, max-content);
+  grid-template-columns: repeat(2, 1fr);
+  @include respond(bg-phone) {
+    grid-template-rows: repeat(3, max-content);
+  }
+}
+
+.registration {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  width: 95%;
+
+  @include respond(tab-port) {
+    margin: 0 1.75rem;
+  }
+  @include respond(bg-phone) {
+    grid-column: 1/-1;
+  }
+}
+
+.events {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  justify-self: center;
+
+  @include respond(bg-phone) {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: max-content;
+    margin-left: 1.75rem;
+  }
+
+  &__header {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  &__item {
+    border: 1px solid $color-white;
+    margin: 2rem 1.75rem;
+    width: max-content;
+    border-radius: 5px;
+    box-shadow: 0 1rem 1rem $color-gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img-box {
+    min-height: max-content;
+    width: 10rem;
+    padding-left: 1.5rem;
+    margin-top: 1.2rem;
+
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    padding: 1.5rem 2rem;
+  }
+}
+
+.past-events {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+
+  display: flex;
+  flex-wrap: wrap;
+  height: max-content;
+  margin-bottom: 2.5rem;
+
+  @include respond(tab-port) {
+    margin-left: 1.75rem;
+  }
+
+  @include respond(bg-phone) {
+    grid-row: 3/4;
+    justify-content: center;
+  }
+
+  &__bg-color {
+    background-color: $color-gray-light-2;
+  }
+}
+

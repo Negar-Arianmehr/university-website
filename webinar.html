@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    <meta name="format-detection" content="telephone=no">-->
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">-->
+
+    <!--        <link rel="preconnect" href="https://fonts.gstatic.com">-->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@0,700;1,300&family=Open+Sans:wght@300;400&family=Roboto:ital,wght@0,300;1,300&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>webinar</title>
+</head>
+<body class="sub-container">
+<!--/*............................*/-->
+<!--/*         header             */-->
+<!--/*       search-nav           */-->
+<!--/*............................*/-->
+<header class="header">
+    <div class="header__logo-search">
+        <img src="img/logo.png" alt="Logo pic" class="header__img">
+        <form action="" class="header__search">
+            <input type="search" class="header__search--input" id="search" PLACEHOLDER="Search here">
+            <button class="header__search--btn">
+                <svg class="header__search--svg">
+                    <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+            </button>
+        </form>
+
+        <span class="toggle-icon-box" id="toggle-box">
+            <button class="toggle-icon" id="toggle"></button>
+        </span>
+    </div>
+
+    <nav class="header__nav header__bg-color" id="nav">
+            <ul class="header__nav--list" id="nav-list">
+                <li class="header__nav--item"><a href="index.html" id="index" class="header__nav--link">Home</a>
+                </li>
+                <li class="header__nav--item"><a href="#" id="services" class="header__nav--link">services</a></li>
+                <li class="header__nav--item"><a href="webinar.html" id="webinar" class="header__nav--link">webinars</a></li>
+                <li class="header__nav--item"><a href="contact.html" id="contact" class="header__nav--link">contact us</a></li>
+            </ul>
+        </nav>
+</header>
+<!--/*............................*/-->
+<!--/*      webinar-header        */-->
+<!--/*............................*/-->
+<div class="webinar-header">
+    <div class="contact-header__text">
+        <h2 class="heading heading__small">join us</h2>
+        <h1 class="heading heading__hug">registration</h1>
+    </div>
+</div>
+<!--/*............................*/-->
+<!--/*      webinar-content       */-->
+<!--/*............................*/-->
+<main class="webinar">
+    <!--/*............................*/-->
+    <!--/*      webinar-form         */-->
+    <!--/*............................*/-->
+    <section class="registration">
+        <div class="form__header margin-top"><h1 class="heading heading__big">registration:</h1></div>
+        <div class="registration__form-box">
+            <form action="" class="form">
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">
+                        Your Info
+                    </legend>
+                    <div class="form-grid">
+                        <div class="form-grid__item-first">
+                            <label for="name" class="form__label">First name:</label>
+                            <input type="text" class="form__input" id="name" placeholder="first name" required>
+                        </div>
+                        <div class="form-grid__item-middle">
+                            <label for="middle-name" class="form__label">Middle name:</label>
+                            <input type="text" class="form__input" id="middle-name" placeholder="middle name" required>
+                        </div>
+                        <div class="form-grid__item-last">
+                            <label for="last-name" class="form__label">Last name:</label>
+                            <input type="text" class="form__input" id="last-name" placeholder="last name" required>
+                        </div>
+                        <div class="form-grid__item-affiliation">
+                            <label for="Affiliation" class="form__label">Affiliation:</label>
+                            <input type="text" class="form__input" id="Affiliation" placeholder="affiliation" required>
+                        </div>
+                        <div class="form-grid__item-email">
+                            <label for="email" class="form__label">Email address:</label>
+                            <input type="email" class="form__input" id="email" placeholder="email address" required>
+                        </div>
+                        <div class="form-grid__item-phone">
+                            <label for="phone" class="form__label">Phone number:</label>
+                            <input type="text" class="form__input" id="phone" placeholder="phone number">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">
+                        Webinar info
+                    </legend>
+                    <div class="margin-bottom">
+                        <label for="webinarName" class="form__label">Webinar name:</label>
+                        <select name="webinar-items" id="webinarName" style="width:50%;" class="form__input">
+                            <option value="" disabled selected hidden>Please Choose...</option>
+                            <option value="title1" class="font-color">The standard Lorem Ipsum passage, used since the 1500s</option>
+                            <option value="title2">1914 translation by H. Rackham</option>
+                            <option value="title3">Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero
+                                in 45 BC
+                            </option>
+                            <option value="title4">Where does it come from?</option>
+                            <option value="title5">Where can I get some?</option>
+                        </select>
+                    </div>
+                    <div class="form-grid__date">
+                        <label for="date" class="form__label">Date:</label>
+                        <input type="date" class="form__input" id="date" placeholder="date">
+                    </div>
+                    <button type="submit" class="form__item btn">
+                        submit
+                    </button>
+                </fieldset>
+
+            </form>
+        </div>
+    </section>
+    <!--/*............................*/-->
+    <!--/*    webinar-next-events    */-->
+    <!--/*............................*/-->
+    <section class="events">
+        <div class="form__header margin-top events__header"><h1 class="heading heading__big">next events:</h1></div>
+        <div class="events__item">
+            <div class="events__img-box">
+                <img src="img/AliRajabi.jpg" alt="photo of Dr Ali Rajabi" class="events__img">
+            </div>
+            <div class="events__text">
+                <h3 class="heading heading-capl">Dr. Ali Rajabi</h3>
+                <div class="events__date">
+                    2021.05.27
+                </div>
+                <p class="next-event__title">Ut in ex vel metus fermentum porta.</p>
+                <p>free</p>
+            </div>
+        </div>
+        <div class="events__item">
+            <div class="events__img-box">
+                <img src="img/NegarArianmehr.jpg" alt="photo of Dr NegarArianmehr" class="events__img">
+            </div>
+            <div class="events__text">
+                <h3 class="heading heading-capl">Dr. Negar Arianmehr</h3>
+                <div class="events__date">
+                    2021.06.03
+                </div>
+                <p class="events__title">Ut in ex vel metus fermentum porta.</p>
+                <p>free</p>
+            </div>
+        </div>
+        <div class="events__item">
+            <div class="events__img-box">
+                <img src="img/Mohamad.jpg" alt="photo of Dr Jonas" class="events__img">
+            </div>
+            <div class="events__text">
+                <h3 class="heading heading-capl">professor Jonas</h3>
+                <div class="events__date">
+                    2021.07.10
+                </div>
+                <p class="events__title">Ut in ex vel metus fermentum porta.</p>
+                <p>free</p>
+            </div>
+        </div>
+        <div class="events__item">
+            <div class="events__img-box">
+                <img src="img/Megha.jpg" alt="photo of Dr Megha" class="events__img">
+            </div>
+            <div class="events__text">
+                <h3 class="heading heading-capl">Dr. Megha</h3>
+                <div class="events__date">
+                    2021.08.07
+                </div>
+                <p class="events__title">Ut in ex vel metus fermentum porta.</p>
+                <p>free</p>
+            </div>
+        </div>
+
+    </section>
+    <!--/*............................*/-->
+    <!--/*      webinar-past-events   */-->
+    <!--/*............................*/-->
+    <section class="past-events">
+        <div class="form__header margin-top events__header"><h1 class="heading heading__big">past events:</h1></div>
+        <div class="events__item past-events__bg-color">
+            <div class="events__img-box">
+                <img src="img/AliRajabi.jpg" alt="photo of Dr Ali Radjabi" class="events__img">
+            </div>
+            <div class="events__text">
+                <h3 class="heading heading-capl">Dr. Ali Rajabi</h3>
+                <div class="events__date">
+                    2021.01.07
+                </div>
+                <p class="events__title">Ut in ex vel metus fermentum porta.</p>
+                <p>free</p>
+            </div>
+        </div>
+        <div class="events__item past-events__bg-color">
+            <div class="events__img-box">
+                <img src="img/NegarArianmehr.jpg" alt="photo of Dr Negar" class="events__img">
+            </div>
+            <div class="events__text">
+                <h3 class="heading heading-capl">Dr. Negar Arianmehr</h3>
+                <div class="events__date">
+                    2021.02.12
+                </div>
+                <p class="events__title">Ut in ex vel metus fermentum porta.</p>
+                <p>free</p>
+            </div>
+        </div>
+        <div class="events__item past-events__bg-color">
+            <div class="events__img-box">
+                <img src="img/AliRajabi.jpg" alt="photo of Dr Ali Radjabi" class="events__img">
+            </div>
+            <div class="events__text">
+                <h3 class="heading heading-capl">Dr. Megha</h3>
+                <div class="events__date">
+                    2020.12.04
+                </div>
+                <p class="events__title">Ut in ex vel metus fermentum porta.</p>
+                <p>free</p>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+<!--/*............................*/-->
+<!--/*         footer             */-->
+<!--/*............................*/-->
+<footer class="footer">
+    <div class="footer__pic">
+        <img src="img/logo.png" alt="Logo picture" class="footer__img">
+    </div>
+    <div class="footer__content--1">
+        <h3 class="footer__header">Techniques</h3>
+        <ul class="footer__list">
+            <li class="footer__item"><a href="#" class="footer__link">accelerator</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Cavity</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Bim electron</a></li>
+        </ul>
+    </div>
+    <div class="footer__content--2">
+        <h3 class="footer__header">Products</h3>
+        <ul class="footer__list">
+            <li class="footer__item"><a href="#" class="footer__link">accelerator</a></li>
+            <li class="footer__item"><a href="#" class="footer__link footer__link-color">Structure Dynamics</a></li>
+            <li class="footer__item"><a href="#" class="footer__link footer__link-color">Spectral</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">units</a></li>
+            <li class="footer__item"><a href="#" class="footer__link footer__link-color">photogun</a></li>
+            <li class="footer__item"><a href="#" class="footer__link footer__link-color">compression</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">parts</a></li>
+        </ul>
+    </div>
+    <div class="footer__content--3">
+        <h3 class="footer__header">Group Works</h3>
+        <ul class="footer__list">
+            <li class="footer__item"><a href="#" class="footer__link">About</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Team</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Downloads</a></li>
+        </ul>
+    </div>
+    <!--    //////////CopyRight///////////-->
+    <div class="footer__copyright">
+        <span class="footer__copyright-1">	&#169; Copyright 2021 Negar Arianmehr</span>
+        <span class="footer__copyright-2">Privacy Policy</span>
+    </div>
+</footer>
+
+
+<script src="js/script.js"></script>
+<script type="javascript">
+    /*========== SELECT OPTION DROP DOWN ==========*/
+    document.querySelector("#webinarName").addEventListener("click", function () {
+        document.querySelector("#webinarName").classList.add("font-color")
+    })
+</script>
+</body>
+</html>

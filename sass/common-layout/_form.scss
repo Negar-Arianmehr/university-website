@@ -1,0 +1,91 @@
+.form {
+  width: 98%;
+  display: inline-block;
+
+  @include respond(phone) {
+    width: 90%;
+  }
+
+  &__fieldset {
+    color: $color-gray-light;
+    border: 1px solid $color-gray-light-3;
+    font-size: 1.7rem;
+    padding: 2rem 1.75rem;
+    margin-left: 1.75rem;
+  }
+
+  &__legend {
+
+  }
+
+  &__item {
+    margin-bottom: 1.25rem;
+  }
+
+  &__label {
+    font-size: 1.6rem;
+    color: $color-gray;
+    display: block;
+  }
+
+  &__input {
+    font-family: $font-family-complex;
+    font-size: 1.5rem;
+    color: $color-gray-light-3;
+    border: 1px solid $color-gray-light;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px $color-gray;
+    width: 80%;
+    padding: .8rem 1rem;
+    outline: none;
+  }
+}
+
+///////////////////////////////
+// grid-form-registration
+///////////////////////////////
+.form-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+
+  & > * {
+    margin-bottom: 1.75rem;
+  }
+
+  &__item-first {
+    grid-row: 1/2;
+  }
+
+  &__item-middle {
+    grid-row: 1/2;
+  }
+
+  &__item-last {
+    grid-row: 2/3;
+  }
+
+  &__item-affiliation {
+    grid-row: 2/3;
+  }
+
+  &__item-email {
+    grid-row: 3/4;
+  }
+
+  &__item-phone {
+    grid-row: 3/4;
+  }
+
+  &__date {
+    width: 50%;
+    margin-bottom: 2.5rem;
+  }
+
+}
+
+.font-color {
+  color: $color-gray !important;
+  font-family: $font-family-main !important;
+  width: max-content;
+}
