@@ -2,7 +2,7 @@
 //<!--/*            home-header     */-->
 //<!--/*............................*/-->
 .home-header {
-  background-image: linear-gradient(to right bottom, rgba($color-secondary-dark, .5), rgba($color-secondary-light, .5)), url("../../../img/background.png");
+  background-image: linear-gradient(to right bottom, rgba($color-secondary-dark, .5), rgba($color-secondary-light, .5)), url("../img/background.png");
   height: 80vh;
   background-position: top;
   background-size: cover;
@@ -53,12 +53,12 @@
 .main {
   grid-row: 3/4;
   grid-column: start-center/ end-center;
-  padding: 11vh 1rem 2rem 0;
+  padding: 5rem 1rem 2rem 0;
   justify-content: center;
 
-  //@include respond(med-desktop) {
-  //  padding-top: 9.5rem;
-  //}
+  @include respond(bg-phone) {
+    padding-top: 1.75rem;
+  }
 }
 
 .achievement {
@@ -189,6 +189,10 @@
       color: $color-black;
       font-weight: 600;
     }
+
+    @include respond(phone) {
+      padding: 2.5rem 0;
+    }
   }
 
   &__heading-2 {
@@ -215,8 +219,14 @@
     display: flex;
     flex-direction: column;
     padding-top: 1.75rem;
+
     @include respond(tab-port) {
       margin: 0 2.5rem;
+      //padding: 0 2.5rem;
+    }
+
+    @include respond(phone) {
+      margin: 0;
       //padding: 0 2.5rem;
     }
   }
@@ -282,6 +292,7 @@
   &__text-box {
     font-size: 1.6rem;
     color: $color-gray-dark-1;
+    margin: 1.25rem;
     display: flex;
     flex-direction: column;
     height: max-content;
@@ -311,7 +322,7 @@
 ////**************pagination********************
 
 .pagination {
-  margin-top: 1.75rem;
+  margin: 1.75rem 0;
   text-align: center;
 
   &__nums {
@@ -342,96 +353,179 @@
     border: 1px solid $color-gray-light-2;
   }
 }
+
 //<!--/*............................*/-->
 //<!--/*         team               */-->
 //<!--/*............................*/-->
-.team {
-  grid-row: 5/6;
-  grid-column: start-center/ end-center;
-  height: 50vh;
-  margin: 3.5rem 0;
-  background-color: #000;
+//.team {
+//  grid-row: 5/6;
+//  grid-column: start-center/ end-center;
+//  height: 50vh;
+//  margin: 3.5rem 0;
+//  background-color: #000;
+//
+//  &:hover {
+//    height: 70vh;
+//  }
+//
+//  @media screen and (max-width: 1600px) {
+//    height: 70vh;
+//
+//    &:hover {
+//      height: 90vh;
+//    }
+//  }
+//
+//
+//  &__cards {
+//    display: grid;
+//    //justify-content: center;
+//    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+//    //grid-template-rows: minmax(2rem, 5rem) max-content minmax(2rem, 5rem);
+//    //grid-gap: 7rem;
+//    //min-width: 100%;
+//    height: 28vh;
+//    margin-bottom: 2.5rem;
+//  }
+//
+//  &__card {
+//    height: 30rem;
+//    //height: 42rem;
+//    max-width: 30rem;
+//    text-align: center;
+//    margin: 2.5rem 5rem;
+//
+//    box-shadow: 0 .5rem 20rem rgba($color-black, .5);
+//    transition: .3s ease-in-out;
+//    //display: flex;
+//    //flex-direction: column;
+//    //justify-content: center;
+//    //align-items: center;
+//
+//    &:hover {
+//      height: 42rem;
+//      background-color: $color-main;
+//    }
+//
+//    @include respond(bg-phone) {
+//      width: 90%;
+//      max-width: 90%;
+//    }
+//  }
+//
+//  &__img-box {
+//    height: 26rem;
+//    width: 26rem;
+//    display: inline-block;
+//    //position: relative;
+//    border: 1.5rem solid $color-main;
+//    //top: -6rem;
+//    //left: 2rem;
+//    z-index: 1;
+//    text-align: center;
+//    //box-shadow: 0 .5rem 2rem rgba($color-black, .2);
+//  }
+//
+//  &__img {
+//    text-align: center;
+//    width: 100%;
+//    height: 100%;
+//    border-radius: 4px;
+//  }
+//
+//  &__text-box {
+//    font-size: 1.25rem;
+//    color: $color-gray-light-2;
+//    padding: 1rem;
+//  }
+//
+//  &__text {
+//    visibility: hidden;
+//  }
+//}
+//
+//.team .team__card:hover .team__text {
+//  visibility: visible;
+//}
+// import Swiper styles
+//@import '../../../node_modules/swiper/swiper-bundle.min.css';
 
-  &:hover {
-    height: 70vh;
-  }
+.cardTeam-section {
+  background-color: $color-gray-light-1;
+  padding-top: 2.5rem;
+  text-align: center;
+}
 
-  @media screen and (max-width: 1600px) {
-    height: 70vh;
+.cardTeam-cards {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-gray-light-1;
+  overflow: hidden;
+   @include respond(bg-phone) {
+     width: 90%;
+     margin: 0 auto;
+   }
+}
 
-    &:hover {
-      height: 90vh;
-    }
-  }
+.swiper-container {
+  width: 100%;
+  //padding-top: 50px;
+  padding-bottom: 50px;
+}
 
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 32rem;
+  //height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, .2);
+  filter: blur(4px);
+  background-color: $color-gray-light-1;
+}
 
-  &__cards {
-    display: grid;
-    //justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    //grid-template-rows: minmax(2rem, 5rem) max-content minmax(2rem, 5rem);
-    //grid-gap: 7rem;
-    //min-width: 100%;
-    height: 28vh;
-    margin-bottom: 2.5rem;
-  }
+.swiper-slide-active {
+  filter: blur(0px);
+  background-color: $color-gray-dark;
+}
 
-  &__card {
-    height: 30rem;
-    //height: 42rem;
-    max-width: 30rem;
-    text-align: center;
-    margin: 2.5rem 5rem;
+.cardTeam {
+  //position: relative;
+  padding: 2.5rem;
 
-    box-shadow: 0 .5rem 20rem rgba($color-black, .5);
-    transition: .3s ease-in-out;
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: center;
-    //align-items: center;
-
-    &:hover {
-      height: 42rem;
-      background-color: $color-main;
-    }
-
-    @include respond(bg-phone) {
-      width: 90%;
-      max-width: 90%;
-    }
+  @include respond(bg-phone) {
+//height: 40vh;
   }
 
   &__img-box {
-    height: 26rem;
-    width: 26rem;
     display: inline-block;
-    //position: relative;
-    border: 1.5rem solid $color-main;
-    //top: -6rem;
-    //left: 2rem;
-    z-index: 1;
-    text-align: center;
-    //box-shadow: 0 .5rem 2rem rgba($color-black, .2);
+    width: 23rem;
+    min-height: 23rem;
+    max-height: 25rem;
+    margin: 0 auto;
+    box-shadow: 0 5px 1rem rgba(#fff,.2);
   }
-
   &__img {
-    text-align: center;
     width: 100%;
     height: 100%;
-    border-radius: 4px;
   }
 
-  &__text-box {
-    font-size: 1.25rem;
-    color: $color-gray-light-2;
-    padding: 1rem;
+  &__content {
+    //height: 30vh;
+    margin-top: 1.5rem;
   }
-
   &__text {
-    visibility: hidden;
+    font-size: 1.5rem;
+    width: 100%;
+    color: $color-gray-light-3;
   }
 }
 
-.team .team__card:hover .team__text {
-  visibility: visible;
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right {
+  background-image: none;
 }

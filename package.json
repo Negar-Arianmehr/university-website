@@ -2,7 +2,7 @@
   "name": "university-project",
   "version": "1.0.0",
   "description": "",
-  "main": "introduction.js",
+  "main": "webinar.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
@@ -11,7 +11,11 @@
   "author": "Negar",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/node": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
     "node-sass": "^5.0.0",
+    "nodemon": "^2.0.7",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.4",
     "postcss-cli": "^8.3.1"
@@ -20,6 +24,7 @@
     "compile-sass": "^1.1.1",
     "css-prefix": "0.0.2",
     "jquery": "^3.5.1",
-    "lightslider": "^1.1.6"
+    "lightslider": "^1.1.6",
+    "swiper": "^6.4.12"
   }
 }

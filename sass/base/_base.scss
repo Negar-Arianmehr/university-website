@@ -64,6 +64,15 @@ li {
   // }
 }
 
+.sub-container {
+  padding: 0 8rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+
 ::selection {
   background-color: #fff;
   color: #000;

@@ -7,7 +7,6 @@
   grid-column: start-center/ end-center;
 
   &__bg-color {
-    //background-color: $color-main;
     background-image: linear-gradient(to right, $color-main-dark, $color-main-light);
   }
 
@@ -32,8 +31,15 @@
     justify-items: center;
 
     @include respond(bg-phone) {
-      flex: 0 0 30%;
-      justify-content: space-between;
+      flex-basis: 80%;
+      justify-content: center;
+      align-items: center;
+      //flex: 0 0 15%;
+      //justify-content: space-between;
+    }
+
+    @include respond(phone) {
+      flex-basis: 68%;
     }
 
     &--btn {
@@ -52,7 +58,7 @@
     }
 
     &--input {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       font-family: inherit;
       width: max-content;
       border: 1px solid $color-gray-light;
@@ -75,17 +81,8 @@
   }
 
   &__nav {
-    //grid-row: 2/3;
-    //grid-column: center-start/ center-end;
     font-size: 2.5rem;
     padding: 1.5rem;
-    //display: flex;
-    //justify-content: space-between;
-    //align-items: center;
-    //
-    //@include respond(bg-phone) {
-    //  display: none ;
-    //}
   }
 
   &__nav--list {
@@ -104,6 +101,7 @@
     &:link,
     &:visited {
       text-decoration: none;
+      text-transform: uppercase;
       //color: $color-gray-light-2;
       background-image: linear-gradient(to right, $color-gray-light-3, $color-gray-light-1);
       -webkit-background-clip: text;
@@ -167,7 +165,7 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    padding: 5rem;
+    padding: 1.5rem 5rem;
     z-index: 100;
     animation-name: moveToDown;
     animation-duration: .2s;

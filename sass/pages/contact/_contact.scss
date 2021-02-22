@@ -1,0 +1,77 @@
+.contact-header {
+  height: 40vh;
+  background-image: linear-gradient(to right bottom, rgba($color-main-so-dark, .8), rgba($color-main, .8)), url("../img/background.png");
+  background-size: cover;
+  background-position: top;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+  }
+}
+
+.contact-content {
+  display: flex;
+  margin: 2rem 2.5rem;
+
+  @include respond(bg-phone) {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+}
+
+.reach {
+  width: 45vw;
+  @include respond(tab-port) {
+    padding: 0 2.5rem;
+    width: 90%;
+  }
+  &__content {
+    flex: 0 0 50%;
+  }
+
+  &__address {
+    margin-left: 1.5rem;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
+  }
+
+  &__map {
+
+  }
+
+}
+
+.contact-form {
+  margin-left: 8rem;
+  width: 45vw;
+
+  @include respond(bg-phone) {
+    width: 90%;
+    margin-left: 2.5rem;
+    margin-top: 1.5rem;
+  }
+
+  &__box {
+    margin-left: 1.5rem;
+  }
+}
+
+iframe {
+  @media only screen and (max-width: 1000px) {
+    width: 300px !important;
+  }
+
+  @include respond(phone) {
+  width: 320px !important;
+    }
+
+  @media only screen and (max-width: 400px) {
+    width: 250px !important;
+  }
+}
+

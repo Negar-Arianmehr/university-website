@@ -23,6 +23,12 @@
     font-size: 4.5rem;
     color: $color-gray-light-2;
     padding-left: 2.75rem;
+
+    @include respond(tab-port) {
+      grid-row: 2/3;
+      grid-column: 2/3;
+      margin-top: 10rem;
+    }
   }
 
   &__figure {
@@ -47,21 +53,10 @@
     height: 40rem;
     width: auto;
     display: block;
-    //
-    //@if $breakpoint == med-desktop {
-    //  height: 35rem;
-    //  width: auto;
-    //}
 
-    //@include respond(tab-land) {
-    //  height: 30rem;
-    //  width: auto;
-    //  }
-    //
-    //@include respond(tab-port) {
-    //  height: 20rem;
-    //  width: auto;
-    //}
+    @media only screen and (max-width: 500px) {
+      height: 30rem;
+    }
   }
 
   &__box {
@@ -189,9 +184,9 @@
     margin-left: 2rem;
 
     @include respond(tab-land) {
-        grid-row: 4/5;
-        grid-column: 3/4;
-      }
+      grid-row: 4/5;
+      grid-column: 3/4;
+    }
   }
 
 }
@@ -207,6 +202,10 @@
 //*************PROFILE****************//
 .profile {
   margin-top: 13.5rem;
+
+  @include respond(tab-port) {
+    margin-top: 9rem;
+  }
 
   &__research {
     margin-bottom: 2.5rem;
@@ -261,6 +260,7 @@
       }
     }
   }
+
   &__header {
     font-size: 3.5rem;
     margin: 2rem 0;
@@ -369,6 +369,7 @@
   }
 
 }
+
 //*************education****************//
 .education {
   display: flex;
@@ -380,6 +381,7 @@
     margin: 0 auto;
     text-align: center;
   }
+
   &__current {
 
     @include respond(bg-phone) {

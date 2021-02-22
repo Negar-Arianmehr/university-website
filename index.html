@@ -10,349 +10,356 @@
     <!--        <link rel="preconnect" href="https://fonts.gstatic.com">-->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@0,700;1,300&family=Open+Sans:wght@300;400&family=Roboto:ital,wght@0,300;1,300&display=swap"
           rel="stylesheet">
+    <!--     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>-->
+    <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
-    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.green.min.css">
-
-    <title>Ali Rajabi</title>
+    <link rel="shortcut icon" type="image/png" href="img/logo.png">
+    <title>Carbon capture</title>
 
 </head>
 <!--/*............................*/-->
 <!--/*         body               */-->
 <!--/*............................*/-->
-<body class="container">
+<body>
 <!--/*............................*/-->
-<!--/*         header             */-->
-<!--/*       search-nav           */-->
+<!--/*       grid-container       */-->
 <!--/*............................*/-->
-<header class="header">
-    <div class="header__logo-search">
-        <img src="img/logo.png" alt="Logo pic" class="header__img">
-        <form action="" class="header__search">
-            <input type="text" class="header__search--input" id="search" PLACEHOLDER="Search here">
-            <button class="header__search--btn">
-                <svg class="header__search--svg">
-                    <use xlink:href="img/sprite.svg#icon-search"></use>
-                </svg>
-            </button>
-        </form>
+<div class="container">
+    <!--/*............................*/-->
+    <!--/*         header             */-->
+    <!--/*       search-nav           */-->
+    <!--/*............................*/-->
+    <header class="header">
+        <div class="header__logo-search">
+            <img src="img/logo.png" alt="Logo pic" class="header__img">
+            <form action="" class="header__search">
+                <input type="text" class="header__search--input" id="search" PLACEHOLDER="Search here">
+                <button type="submit" class="header__search--btn">
+                    <svg class="header__search--svg">
+                        <use xlink:href="img/sprite.svg#icon-search"></use>
+                    </svg>
+                </button>
+            </form>
 
-        <span class="toggle-icon-box" id="toggle-box">
+            <span class="toggle-icon-box" id="toggle-box">
             <button class="toggle-icon" id="toggle"></button>
         </span>
-    </div>
+        </div>
 
-    <nav class="header__nav header__bg-color" id="nav">
-        <ul class="header__nav--list" id="nav-list">
-            <li class="header__nav--item"><a href="#" class="header__nav--link header__nav--link__active">Home</a></li>
-            <li class="header__nav--item"><a href="#" class="header__nav--link">services</a></li>
-            <li class="header__nav--item"><a href="#" class="header__nav--link">webinars</a></li>
-            <li class="header__nav--item"><a href="about.html" class="header__nav--link">contact us</a></li>
-        </ul>
-    </nav>
-</header>
-<!--/*............................*/-->
-<!--/*            home-header     */-->
-<!--/*............................*/-->
-<div class="home-header">
-    <div class="home-header__content">
-        <h2 class="heading heading__small">we solve the problem</h2>
-        <h1 class="heading heading__hug">carbon capture</h1>
-        <div class="home-header__btn">
-            <a href="#" class="btn">Contact Us</a>
+        <nav class="header__nav header__bg-color" id="nav">
+            <ul class="header__nav--list" id="nav-list">
+                <li class="header__nav--item"><a href="#" id="index" class="header__nav--link">Home</a>
+                </li>
+                <li class="header__nav--item"><a href="#" id="services" class="header__nav--link">services</a></li>
+                <li class="header__nav--item"><a href="webinar.html" id="webinar" class="header__nav--link">webinars</a></li>
+                <li class="header__nav--item"><a href="contact.html" id="contact" class="header__nav--link">contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--/*............................*/-->
+    <!--/*            home-header     */-->
+    <!--/*............................*/-->
+    <div class="home-header">
+        <div class="home-header__content">
+            <h2 class="heading heading__small">we solve the problem</h2>
+            <h1 class="heading heading__hug">carbon capture</h1>
+            <div class="home-header__btn">
+                <a href="#" class="btn">Contact Us</a>
+            </div>
         </div>
     </div>
-</div>
-<!--/*............................*/-->
-<!--/*            main            */-->
-<!--/*............................*/-->
-<!--/*  achievement--- description */-->
-<!--/*............................*/-->
-<!--/*............................*/-->
-<main class="main">
     <!--/*............................*/-->
-    <!--/*         achievement        */-->
+    <!--/*            main            */-->
     <!--/*............................*/-->
-    <section class="achievement">
-        <h2 class="heading heading__big">resent achievement</h2>
-        <div class="achievement__cards">
-            <div class="achievement__card">
-                <figure class="achievement__img-box">
-                    <img src="img/achivement-1.jpg" alt="picture of achievement" class="achievement__img">
-                </figure>
-                <div class="achievement__heading">
-                    <h3 class="heading heading__medium">first achievement</h3>
+    <!--/*  achievement--- description */-->
+    <!--/*............................*/-->
+    <!--/*............................*/-->
+    <main class="main">
+        <!--/*............................*/-->
+        <!--/*         achievement        */-->
+        <!--/*............................*/-->
+        <section class="achievement">
+            <h2 class="heading heading__big">resent achievement</h2>
+            <div class="achievement__cards">
+                <div class="achievement__card">
+                    <figure class="achievement__img-box">
+                        <img src="img/achivement-1.jpg" alt="picture of achievement" class="achievement__img">
+                    </figure>
+                    <div class="achievement__heading">
+                        <h3 class="heading heading__medium">first achievement</h3>
+                    </div>
+                    <p class="achievement__text">
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+                    </p>
+                    <div class="achievement__card-btn"><a href="#" class=" btn">read more</a></div>
                 </div>
-                <p class="achievement__text">
-                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-                </p>
-                <div class="achievement__card-btn"><a href="#" class=" btn">read more</a></div>
+
+                <div class="achievement__card">
+                    <figure class="achievement__img-box">
+                        <img src="img/achivement-2.jpg" alt="picture of achievement" class="achievement__img">
+                    </figure>
+                    <div class="achievement__heading">
+                        <h3 class="heading heading__medium">second achievement</h3>
+                    </div>
+                    <p class="achievement__text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus
+                        pariatur
+                        voluptatibus. Quidem consequatur harum volupta!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <div class="achievement__card-btn"><a href="#" class="btn">read more</a></div>
+                </div>
+
+                <div class="achievement__card">
+                    <figure class="achievement__img-box">
+                        <img src="img/achivement-3.jpg" alt="picture of achievement" class="achievement__img">
+                    </figure>
+                    <div class="achievement__heading">
+                        <h3 class="heading heading__medium">third achievement</h3>
+                    </div>
+                    <p class="achievement__text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus
+                        pariatur
+                        voluptatibus.
+                    </p>
+                    <div class="achievement__card-btn"><a href="#" class="btn">read more</a></div>
+                </div>
+
             </div>
 
-            <div class="achievement__card">
-                <figure class="achievement__img-box">
-                    <img src="img/achivement-2.jpg" alt="picture of achievement" class="achievement__img">
-                </figure>
-                <div class="achievement__heading">
-                    <h3 class="heading heading__medium">second achievement</h3>
-                </div>
-                <p class="achievement__text">
+            <div class="achievement__btn">
+                <a href="#" class="btn">discover all info</a>
+            </div>
+        </section>
+        <!--/*............................*/-->
+        <!--/*         description        */-->
+        <!--/*............................*/-->
+        <section class="description">
+            <figure class="description__img-box">
+                <img src="img/description-1.jpg" alt="Pic of our works" class="description__img">
+            </figure>
+            <div class="description__text-box">
+                <div><h3 class="heading heading__small">description of our work</h3></div>
+                <div><h1 class="description__heading-2 heading heading__medium">best decision for world</h1></div>
+                <div class="description__text"><p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur
+                    voluptatibus. Quidem consequatur harum volupta!Quidem consequatur harum volupta!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur
                     voluptatibus. Quidem consequatur harum volupta!
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <div class="achievement__card-btn"><a href="#" class="btn">read more</a></div>
-            </div>
-
-            <div class="achievement__card">
-                <figure class="achievement__img-box">
-                    <img src="img/achivement-3.jpg" alt="picture of achievement" class="achievement__img">
-                </figure>
-                <div class="achievement__heading">
-                    <h3 class="heading heading__medium">third achievement</h3>
+                </p></div>
+                <div class="description__btn-box">
+                    <a href="#" class="btn">more</a>
                 </div>
-                <p class="achievement__text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur
-                    voluptatibus.
-                </p>
-                <div class="achievement__card-btn"><a href="#" class="btn">read more</a></div>
             </div>
+        </section>
+    </main>
+    <!--/*............................*/-->
+    <!--/*         news               */-->
+    <!--/*............................*/-->
+    <section class="news">
+        <div class="heading-center-margin"><h2 class="heading heading__big">Resent news</h2></div>
+        <div class="news__box">
+            <a href="https://www.greenbiz.com/article/potential-carbon-capture-tech-captivating" target="_blank"
+               class="news__content">
+                <figure class="news__img-box">
+                    <img src="img/news-1.jpg" alt="news picture" class="news__img news__img-left">
+                </figure>
+                <div class="news__text-box">
+                    <h2 class="heading heading__medium">The potential for carbon-capture tech is captivating</h2>
+                    <p>
+                        This week, oil giant ExxonMobil pledged $3 billion to the development of a carbon capture and
+                        storage
+                        business over the next five years — in a bid to manage its business risks associated with
+                        climate
+                        change. CEO Darren Woods noted in the company's press release:
+                    </p>
+                    <p class="news__continue">continue reading...</p>
+                </div>
+            </a>
 
+            <a href="https://earther.gizmodo.com/the-only-carbon-capture-plant-in-the-u-s-just-closed-1846177778"
+               target="_blank" class="news__content news__reverse">
+                <figure class="news__img-box">
+                    <img src="img/news-2.jpg" alt="news picture" class="news__img news__img-right">
+                </figure>
+                <div class="news__text-box">
+                    <h2 class="heading heading__medium">The Only Carbon Capture Coal Plant in the U.S. Just Closed</h2>
+                    <p class="news__text">
+                        Early last year, the Trump administration’s Department of Energy celebrated a special
+                        birthday. “Happy Third Operating Anniversary, Petra Nova!” the agency trumpeted in a
+                        press release. The release boasted of a coal-fired power plant in Texas that seemed to
+                        have done the impossible: It successfully removed carbon dioxide from the plant’s
+                        emissions for three years, safely storing them.
+                    </p>
+                    <p class="news__continue">continue reading...</p>
+                </div>
+            </a>
+
+            <a href="https://www.cbia.com/news/economy/exxonmobil-carbon-capture-business-unit/" target="_blank"
+               class="news__content">
+                <figure class="news__img-box">
+                    <img src="img/news-3.jpg" alt="" class="news__img news__img-left">
+                </figure>
+                <div class="news__text-box">
+                    <h2 class="heading heading__medium">ExxonMobil Launches Carbon Capture Business Unit</h2>
+                    <p class="news__text">
+                        ExxonMobil has launched a new business to commercialize the energy company's low-carbon
+                        technology
+                        portfolio.
+                        ExxonMobil Low Carbon Solutions will initially focus on carbon capture and storage, one of the
+                        critical technologies
+                        required to achieve net zero emissions and the climate goals outlined in the Paris Agreement.
+                        The new business unit is planning more than 20 new carbon capture and storage opportunities
+                        around
+                        the
+                        world to enable large-scale emission reductions.
+                    </p>
+                    <p class="news__continue">continue reading...</p>
+                </div>
+            </a>
+
+            <a href="https://techxplore.com/news/2021-02-carbon-dioxide-atmosphere-sustainable-energy.html"
+               target="_blank"
+               class="news__content news__reverse">
+                <figure class="news__img-box">
+                    <img src="img/news-4.jpg" alt="" class="news__img news__img-right">
+                </figure>
+                <div class="news__text-box">
+                    <h2 class="heading heading__medium">Carbon dioxide removal from the atmosphere using sustainable
+                        energy</h2>
+                    <p class="news__text">
+                        Much work is taking place on methods for capturing CO2 from the atmosphere to combat climate
+                        change.
+                        In addition to existing methods that use toxic solvents, electrochemical techniques that can
+                        work
+                        with sustainable electricity are now becoming available. The TU Delft research group led by
+                        David
+                        Vermaas worked together with Wetsus and Caltech to analyze these sustainable technologies for
+                        CO2
+                        removal, and compared them for the first time. The researchers also described which methods show
+                        the most potential for making large-scale CO2 removal possible. Their paper on this was
+                        published
+                        recently in the scientific journal Energy & Environmental Science.
+                    </p>
+                    <p class="news__continue">continue reading...</p>
+                </div>
+            </a>
         </div>
-
-        <div class="achievement__btn">
-            <a href="#" class="btn">discover all info</a>
+        <!--/*............................*/-->
+        <!--/*         pagination         */-->
+        <!--/*............................*/-->
+        <div class="pagination">
+            <div class="pagination__nums">
+                <a href="#">&laquo;</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">&raquo;</a>
+            </div>
         </div>
     </section>
-    <!--/*............................*/-->
-    <!--/*         description        */-->
-    <!--/*............................*/-->
-    <section class="description">
-        <figure class="description__img-box">
-            <img src="img/description-1.jpg" alt="Pic of our works" class="description__img">
-        </figure>
-        <div class="description__text-box">
-            <div><h3 class="heading heading__small">description of our work</h3></div>
-            <div><h1 class="description__heading-2 heading heading__medium">best decision for world</h1></div>
-            <div class="description__text"><p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur
-                voluptatibus. Quidem consequatur harum volupta!Quidem consequatur harum volupta!
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur
-                voluptatibus. Quidem consequatur harum volupta!
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            </p></div>
-            <div class="description__btn-box">
-                <a href="#" class="btn">more</a>
-            </div>
-        </div>
-    </section>
-</main>
-<!--/*............................*/-->
-<!--/*         news               */-->
-<!--/*............................*/-->
-<section class="news">
-    <div class="heading-center-margin"><h2 class="heading heading__big">Resent news</h2></div>
-    <div class="news__box">
-        <a href="https://www.greenbiz.com/article/potential-carbon-capture-tech-captivating" target="_blank"
-           class="news__content">
-            <figure class="news__img-box">
-                <img src="img/news-1.jpg" alt="news picture" class="news__img news__img-left">
-            </figure>
-            <div class="news__text-box">
-                <h2 class="heading heading__medium">The potential for carbon-capture tech is captivating</h2>
-                <p>
-                    This week, oil giant ExxonMobil pledged $3 billion to the development of a carbon capture and
-                    storage
-                    business over the next five years — in a bid to manage its business risks associated with climate
-                    change. CEO Darren Woods noted in the company's press release:
-                </p>
-                <p class="news__continue">continue reading...</p>
-            </div>
-        </a>
 
-        <a href="https://earther.gizmodo.com/the-only-carbon-capture-plant-in-the-u-s-just-closed-1846177778"
-           target="_blank" class="news__content news__reverse">
-            <figure class="news__img-box">
-                <img src="img/news-2.jpg" alt="news picture" class="news__img news__img-right">
-            </figure>
-            <div class="news__text-box">
-                <h2 class="heading heading__medium">The Only Carbon Capture Coal Plant in the U.S. Just Closed</h2>
-                <p class="news__text">
-                    Early last year, the Trump administration’s Department of Energy celebrated a special
-                    birthday. “Happy Third Operating Anniversary, Petra Nova!” the agency trumpeted in a
-                    press release. The release boasted of a coal-fired power plant in Texas that seemed to
-                    have done the impossible: It successfully removed carbon dioxide from the plant’s
-                    emissions for three years, safely storing them.
-                </p>
-                <p class="news__continue">continue reading...</p>
-            </div>
-        </a>
-
-        <a href="https://www.cbia.com/news/economy/exxonmobil-carbon-capture-business-unit/" target="_blank"
-           class="news__content">
-            <figure class="news__img-box">
-                <img src="img/news-3.jpg" alt="" class="news__img news__img-left">
-            </figure>
-            <div class="news__text-box">
-                <h2 class="heading heading__medium">ExxonMobil Launches Carbon Capture Business Unit</h2>
-                <p class="news__text">
-                    ExxonMobil has launched a new business to commercialize the energy company's low-carbon technology
-                    portfolio.
-                    ExxonMobil Low Carbon Solutions will initially focus on carbon capture and storage, one of the
-                    critical technologies
-                    required to achieve net zero emissions and the climate goals outlined in the Paris Agreement.
-                    The new business unit is planning more than 20 new carbon capture and storage opportunities around
-                    the
-                    world to enable large-scale emission reductions.
-                </p>
-                <p class="news__continue">continue reading...</p>
-            </div>
-        </a>
-
-        <a href="https://techxplore.com/news/2021-02-carbon-dioxide-atmosphere-sustainable-energy.html" target="_blank"
-           class="news__content news__reverse">
-            <figure class="news__img-box">
-                <img src="img/news-4.jpg" alt="" class="news__img news__img-right">
-            </figure>
-            <div class="news__text-box">
-                <h2 class="heading heading__medium">Carbon dioxide removal from the atmosphere using sustainable
-                    energy</h2>
-                <p class="news__text">
-                    Much work is taking place on methods for capturing CO2 from the atmosphere to combat climate change.
-                    In addition to existing methods that use toxic solvents, electrochemical techniques that can work
-                    with sustainable electricity are now becoming available. The TU Delft research group led by David
-                    Vermaas worked together with Wetsus and Caltech to analyze these sustainable technologies for CO2
-                    removal, and compared them for the first time. The researchers also described which methods show
-                    the most potential for making large-scale CO2 removal possible. Their paper on this was published
-                    recently in the scientific journal Energy & Environmental Science.
-                </p>
-                <p class="news__continue">continue reading...</p>
-            </div>
-        </a>
-    </div>
-    <!--/*............................*/-->
-    <!--/*         pagination         */-->
-    <!--/*............................*/-->
-    <div class="pagination">
-        <div class="pagination__nums">
-            <a href="#">&laquo;</a>
-            <a href="#" class="active">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">&raquo;</a>
-        </div>
-    </div>
-</section>
+</div><!--    end of grid-->
 <!--/*............................*/-->
 <!--/*         team               */-->
 <!--/*............................*/-->
-<section class="team">
-    <div class="heading-center-margin"><h2 class="heading heading__big">team members</h2></div>
-    <div class="team__cards">
-        <ul id="light-Slider" class="owl-carousel owl-theme">
-
-            <li>
-                <div class="team__card">
-                    <a href="AliRajabi.html" target="_blank">
-                        <div class="team__img-box">
-                            <img src="img/AliRajabi.jpg" alt="pic of Dr. Rajabi" class="team__img">
-                        </div>
-                        <div class="team__text-box">
-                            <h3 class="heading-capl heading__medium">Dr.</h3>
-                            <h4 class="heading-capl heading__small">Ali Rajabi</h4>
-                            <p class="team__text">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio
-                                necessitatibus
-                                pariatur
-                                voluptatibus.
-                            </p>
-                        </div>
-                    </a>
+<section class="cardTeam-section">
+    <div><h2 class="heading heading__big">team members</h2></div>
+    <!-- Swiper -->
+    <div class="cardTeam-cards">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!--            every card -->
+                <div class="swiper-slide">
+                    <div class="cardTeam">
+                        <a href="AliRajabi.html">
+                            <div class="cardTeam__img-box">
+                                <img src="img/AliRajabi.jpg" alt="pic of Dr. AliRajabi" class="cardTeam__img">
+                            </div>
+                            <div class="cardTeam__content">
+                                <h3 class="heading-capl heading__medium">Dr.</h3>
+                                <h4 class="heading-capl heading__small">Ali Rajabi</h4>
+                                <p class="cardTeam__text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio
+                                    necessitatibus
+                                    pariatur
+                                    voluptatibus. Quidem consequatur harum volupta!
+                                </p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </li>
+                <!--            end of every card-->
 
-            <li>
-                <div class="team__card">
-                    <a>
-                        <div class="team__img-box">
-                            <img src="img/NegarArianmehr.jpg" alt="pic of Dr. Arianmehr" class="team__img">
+                <!--            every card -->
+                <div class="swiper-slide">
+                    <div class="cardTeam">
+                        <div class="cardTeam__img-box">
+                            <img src="img/NegarArianmehr.jpg" alt="pic of Dr. Arianmehr" class="cardTeam__img">
                         </div>
-                        <div class="team__text-box">
+                        <div class="cardTeam__content">
                             <h3 class="heading-capl heading__medium">Dr.</h3>
                             <h4 class="heading-capl heading__small">Negar Arianmehr</h4>
-                            <p class="team__text">
+                            <p class="cardTeam__text">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio
                                 necessitatibus
                                 pariatur
                                 voluptatibus. Quidem consequatur harum volupta!
                             </p>
                         </div>
-                    </a>
+                    </div>
                 </div>
-            </li>
+                <!--            end of every card-->
 
-            <li>
-                <div class="team__card">
-                    <a>
-                        <div class="team__img-box">
-                            <img src="img/Mohamad.jpg" alt="Pic of Pro" class="team__img">
+                <!--            every card -->
+                <div class="swiper-slide">
+                    <div class="cardTeam">
+                        <div class="cardTeam__img-box">
+                            <img src="img/Mohamad.jpg" alt="pic of Dr. Yam" class="cardTeam__img">
                         </div>
-                        <div class="team__text-box">
-                            <h3 class="heading-capl heading__medium">Professor</h3>
+                        <div class="cardTeam__content">
+                            <h3 class="heading-capl heading__medium">professor</h3>
                             <h4 class="heading-capl heading__small">Jonas</h4>
-                            <p class="team__text">
+                            <p class="cardTeam__text">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio
                                 necessitatibus
                                 pariatur
-                                voluptatibus.
+                                voluptatibus. Quidem consequatur harum volupta!
                             </p>
                         </div>
-                    </a>
+                    </div>
                 </div>
-            </li>
+                <!--            end of every card-->
 
-            <li>
-                <div class="team__card">
-                    <a>
-                        <div class="team__img-box">
-                            <img src="img/Megha.jpg" alt="Pic of Megha" class="team__img">
+                <!--            every card -->
+                <div class="swiper-slide">
+                    <div class="cardTeam">
+                        <div class="cardTeam__img-box">
+                            <img src="img/Megha.jpg" alt="pic of Dr. Arianmehr" class="cardTeam__img">
                         </div>
-                        <div class="team__text-box">
-                            <h3 class="heading-capl heading__medium">Researcher</h3>
+                        <div class="cardTeam__content">
+                            <h3 class="heading-capl heading__medium">Dr.</h3>
                             <h4 class="heading-capl heading__small">Megha</h4>
-                            <p class="team__text">
+                            <p class="cardTeam__text">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio
                                 necessitatibus
                                 pariatur
-                                voluptatibus.
+                                voluptatibus. Quidem consequatur harum volupta!
                             </p>
                         </div>
-                    </a>
+                    </div>
                 </div>
-            </li>
-
-            <li class="team__card">
-                <div class="team__img-box">
-                    <img src="img/Ali_new.jpg" alt="" class="team__img">
-                </div>
-                <div class="team__text-box">
-                    <h3 class="heading-capl heading__medium">Professor</h3>
-                    <h4 class="heading-capl heading__small">Jonas</h4>
-                    <p class="team__text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus
-                        pariatur
-                        voluptatibus.
-                    </p>
-                </div>
-            </li>
-        </ul>
+                <!--            end of every card-->
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
     </div>
 
 </section>
-
 
 <!--/*............................*/-->
 <!--/*         footer             */-->
@@ -403,15 +410,39 @@
 <!--/*............................*/-->
 
 
-<script type="text/javascript" src="js/script.js"></script>
+<!--<script src="node_modules/jquery/dist/jquery.min.js"></script>-->
+<!--<script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>-->
+<!--<script>-->
+<!--    /*========== MEET THE TEAM CAROUSEL ==========*/-->
+<!--    $(document).ready(function () {-->
+<!--        $('.owl-carousel').owlCarousel();-->
+<!--    });-->
+<!--</script>-->
 
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+<!--<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>-->
+<script src="node_modules/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper-->
 <script>
-    /*========== MEET THE TEAM CAROUSEL ==========*/
-    $(document).ready(function () {
-        $('.owl-carousel').owlCarousel();
+    const swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            // rotate: 50,
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2,
+            slideShadows: true,
+        },
+        //for show whole of page
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
     });
 </script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
