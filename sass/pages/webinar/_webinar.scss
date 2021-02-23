@@ -7,6 +7,10 @@
    @media only screen and (max-width: 600px){
      height: 45vh;
    }
+
+  @media only screen and (max-width: 400px) {
+    height: 40vh;
+  }
 }
 
 ///////////////////////////////
@@ -15,7 +19,8 @@
 .webinar {
   display: grid;
   grid-template-rows: repeat(2, max-content);
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr max-content;
+
   @include respond(bg-phone) {
     grid-template-rows: repeat(3, max-content);
   }

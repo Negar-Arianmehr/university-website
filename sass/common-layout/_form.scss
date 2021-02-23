@@ -39,6 +39,7 @@
     padding: .8rem 1rem;
     outline: none;
   }
+
 }
 
 ///////////////////////////////
@@ -65,7 +66,7 @@
     grid-row: 2/3;
   }
 
-  &__item-affiliation {
+  &__item-phone {
     grid-row: 2/3;
   }
 
@@ -73,15 +74,14 @@
     grid-row: 3/4;
   }
 
-  &__item-phone {
+  &__item-affiliation {
     grid-row: 3/4;
   }
 
   &__date {
-    width: 50%;
+    width: 45%;
     margin-bottom: 2.5rem;
   }
-
 }
 
 .font-color {

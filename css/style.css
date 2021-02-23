@@ -363,6 +363,10 @@ li {
     .heading__hug {
       font-size: 4.2rem;
       letter-spacing: 1.2rem; } }
+  @media only screen and (max-width: 400px) {
+    .heading__hug {
+      font-size: 3.5rem;
+      letter-spacing: 1rem; } }
 
 .heading__big {
   font-size: 3.5rem;
@@ -531,14 +535,14 @@ li {
     grid-row: 1/2; }
   .form-grid__item-last {
     grid-row: 2/3; }
-  .form-grid__item-affiliation {
+  .form-grid__item-phone {
     grid-row: 2/3; }
   .form-grid__item-email {
     grid-row: 3/4; }
-  .form-grid__item-phone {
+  .form-grid__item-affiliation {
     grid-row: 3/4; }
   .form-grid__date {
-    width: 50%;
+    width: 45%;
     margin-bottom: 2.5rem; }
 
 .font-color {
@@ -843,11 +847,14 @@ li {
   @media only screen and (max-width: 600px) {
     .webinar-header {
       height: 45vh; } }
+  @media only screen and (max-width: 400px) {
+    .webinar-header {
+      height: 40vh; } }
 
 .webinar {
   display: grid;
   grid-template-rows: repeat(2, max-content);
-  grid-template-columns: repeat(2, 1fr); }
+  grid-template-columns: 1fr max-content; }
   @media only screen and (max-width: 50em) {
     .webinar {
       grid-template-rows: repeat(3, max-content); } }
