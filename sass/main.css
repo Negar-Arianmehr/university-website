@@ -649,7 +649,7 @@ li {
 }
 .form__input {
   font-family: "Dancing Script", cursive;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #cccccc;
   border: 1px solid #999;
   border-radius: 5px;
@@ -657,6 +657,13 @@ li {
   width: 80%;
   padding: 0.8rem 1rem;
   outline: none;
+}
+.form__input::after {
+  font-family: "Roboto", sans-serif;
+}
+.form__input:focus {
+  color: #777;
+  font-family: "Roboto", sans-serif;
 }
 
 .form-grid {
@@ -682,8 +689,19 @@ li {
 .form-grid__item-email {
   grid-row: 3/4;
 }
+@media only screen and (max-width: 75em) {
+  .form-grid__item-email {
+    grid-column: 1/-1;
+  }
+}
 .form-grid__item-affiliation {
   grid-row: 3/4;
+}
+@media only screen and (max-width: 75em) {
+  .form-grid__item-affiliation {
+    grid-row: 4/5;
+    grid-column: 1/-1;
+  }
 }
 .form-grid__date {
   width: 45%;

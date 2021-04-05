@@ -30,7 +30,7 @@
 
   &__input {
     font-family: $font-family-complex;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: $color-gray-light-3;
     border: 1px solid $color-gray-light;
     border-radius: 5px;
@@ -38,8 +38,16 @@
     width: 80%;
     padding: .8rem 1rem;
     outline: none;
-  }
 
+    &::after {
+      font-family: $font-family-main;
+    }
+
+    &:focus {
+      color: $color-gray;
+      font-family: $font-family-main;
+    }
+  }
 }
 
 ///////////////////////////////
@@ -72,11 +80,25 @@
 
   &__item-email {
     grid-row: 3/4;
+
+    @include respond(tab-land) {
+      grid-column: 1/-1;
+    }
   }
 
   &__item-affiliation {
     grid-row: 3/4;
-  }
+
+    @include respond(tab-land) {
+      grid-row: 4/5;
+      grid-column: 1/-1;
+
+      //input {
+      //  &:focus {
+      //    width: max-content;
+      //  }
+      }
+    }
 
   &__date {
     width: 45%;
