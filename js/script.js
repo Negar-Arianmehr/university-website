@@ -6,20 +6,39 @@
 //         nav.classList.add("")
 //     }
 // })
-const x = document.getElementById("nav-list")
+
+
+const button = document.querySelectorAll(".btn");
+const modalDiv = document.querySelector("#myModal");
+button.forEach(function (btn) {
+    const modal = function () {
+        btn.addEventListener("click", function (e) {
+            e.preventDefault()
+            document.querySelector("#myModal").classList.remove("noShow");
+            document.querySelector("#myModal").classList.add("modal");
+        })
+    }
+    modal()
+});
+modalDiv.addEventListener("click", function () {
+    modalDiv.classList.remove("modal");
+    modalDiv.classList.add("noShow");
+})
+
+const x = document.getElementById("nav-list");
 document.querySelector("#toggle, #toggle-box").addEventListener("click", function () {
 
     if (x.className === "header__nav--list") {
         x.className = "nav-toggle"
-        document.querySelector("#nav").classList.add("active")
-        document.querySelector("#toggle").classList.remove("toggle-icon")
-        document.querySelector("#toggle").classList.add("close-icon")
+        document.querySelector("#nav").classList.add("active");
+        document.querySelector("#toggle").classList.remove("toggle-icon");
+        document.querySelector("#toggle").classList.add("close-icon");
 
     } else {
         x.className = "header__nav--list"
-        document.querySelector("#nav").classList.remove("active")
-        document.querySelector("#toggle").classList.add("toggle-icon")
-        document.querySelector("#toggle").classList.remove("close-icon")
+        document.querySelector("#nav").classList.remove("active");
+        document.querySelector("#toggle").classList.add("toggle-icon");
+        document.querySelector("#toggle").classList.remove("close-icon");
     }
 })
 

@@ -22,6 +22,9 @@
 <!--/*         body               */-->
 <!--/*............................*/-->
 <body>
+<div id="myModal" class="noShow">
+    <h1>This is only a Demo. Thank you for visiting.</h1>
+</div>
 <!--/*............................*/-->
 <!--/*       grid-container       */-->
 <!--/*............................*/-->
@@ -51,9 +54,12 @@
             <ul class="header__nav--list" id="nav-list">
                 <li class="header__nav--item"><a href="#" id="index" class="header__nav--link">Home</a>
                 </li>
-                <li class="header__nav--item"><a href="#" id="services" class="header__nav--link">services</a></li>
-                <li class="header__nav--item"><a href="webinar.html" id="webinar" class="header__nav--link">webinars</a></li>
-                <li class="header__nav--item"><a href="contact.html" id="contact" class="header__nav--link">contact us</a></li>
+                <li class="header__nav--item"><a href="introduction.html" id="services" class="header__nav--link">Members</a>
+                </li>
+                <li class="header__nav--item"><a href="webinar.html" id="webinar" class="header__nav--link">webinars</a>
+                </li>
+                <li class="header__nav--item"><a href="contact.html" id="contact" class="header__nav--link">contact
+                    us</a></li>
             </ul>
         </nav>
     </header>
@@ -65,7 +71,7 @@
             <h2 class="heading heading__small">we solve the problem</h2>
             <h1 class="heading heading__hug">carbon capture</h1>
             <div class="home-header__btn">
-                <a href="#" class="btn">Contact Us</a>
+                <button class="btn">Contact Us</button>
             </div>
         </div>
     </div>
@@ -92,7 +98,9 @@
                     <p class="achievement__text">
                         The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
                     </p>
-                    <div class="achievement__card-btn"><a href="#" class=" btn">read more</a></div>
+                    <div class="achievement__card-btn">
+                        <button class=" btn">read more</button>
+                    </div>
                 </div>
 
                 <div class="achievement__card">
@@ -108,7 +116,9 @@
                         voluptatibus. Quidem consequatur harum volupta!
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
-                    <div class="achievement__card-btn"><a href="#" class="btn">read more</a></div>
+                    <div class="achievement__card-btn">
+                        <button class="btn">read more</button>
+                    </div>
                 </div>
 
                 <div class="achievement__card">
@@ -123,13 +133,15 @@
                         pariatur
                         voluptatibus.
                     </p>
-                    <div class="achievement__card-btn"><a href="#" class="btn">read more</a></div>
+                    <div class="achievement__card-btn">
+                        <button class="btn">read more</button>
+                    </div>
                 </div>
 
             </div>
 
             <div class="achievement__btn">
-                <a href="#" class="btn">discover all info</a>
+                <button class="btn">discover all info</button>
             </div>
         </section>
         <!--/*............................*/-->
@@ -151,7 +163,7 @@
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 </p></div>
                 <div class="description__btn-box">
-                    <a href="#" class="btn">more</a>
+                    <button class="btn">more</button>
                 </div>
             </div>
         </section>
@@ -371,30 +383,58 @@
     <div class="footer__content--1">
         <h3 class="footer__header">Techniques</h3>
         <ul class="footer__list">
-            <li class="footer__item"><a href="#" class="footer__link">accelerator</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Cavity</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Bim electron</a></li>
+            <li class="footer__item">
+                <button class="footer__link">accelerator</button>
+            </li>
+            <li class="footer__item">
+                <button class="footer__link">Cavity</button>
+            </li>
+            <li class="footer__item">
+                <button class="footer__link">Bim electron</button>
+            </li>
         </ul>
     </div>
     <div class="footer__content--2">
         <h3 class="footer__header">Products</h3>
         <ul class="footer__list">
-            <li class="footer__item"><a href="#" class="footer__link">accelerator</a></li>
-            <li class="footer__item"><a href="#" class="footer__link footer__link-color">Structure Dynamics</a></li>
-            <li class="footer__item"><a href="#" class="footer__link footer__link-color">Spectral</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">units</a></li>
-            <li class="footer__item"><a href="#" class="footer__link footer__link-color">photogun</a></li>
-            <li class="footer__item"><a href="#" class="footer__link footer__link-color">compression</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">parts</a></li>
+            <li class="footer__item">
+                <button class="footer__link">accelerator</button>
+            </li>
+            <li class="footer__item">
+                <button class="footer__link footer__link-color">Structure Dynamics</button>
+            </li>
+            <li class="footer__item">
+                <button class="footer__link footer__link-color">Spectral</button>
+            </li>
+            <li class="footer__item">
+                <button class="footer__link">units</button>
+            </li>
+            <li class="footer__item">
+                <button class="footer__link footer__link-color">photogun</button>
+            </li>
+            <li class="footer__item">
+                <button class="footer__link footer__link-color">compression</button>
+            </li>
+            <li class="footer__item">
+                <button class="footer__link">parts</button>
+            </li>
         </ul>
     </div>
     <div class="footer__content--3">
         <h3 class="footer__header">Group Works</h3>
         <ul class="footer__list">
-            <li class="footer__item"><a href="#" class="footer__link">About</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Team</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Downloads</a></li>
+            <li class="footer__item">
+                <button class="footer__link">About</button>
+            </li>
+            <li class="footer__item">
+                <button class="footer__link">Team</button>
+            </li>
+            <li class="footer__item">
+                <button class="footer__link">Contact Us</button>
+            </li>
+            <li class="footer__item">
+                <button class="footer__link">Downloads</button>
+            </li>
         </ul>
     </div>
     <!--    //////////CopyRight///////////-->

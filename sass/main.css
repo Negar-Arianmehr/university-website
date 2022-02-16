@@ -99,6 +99,43 @@ li {
   margin-bottom: 2rem;
 }
 
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e9a0a0;
+  color: #eee;
+  font-size: 3.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+.modal h1 {
+  padding: 2rem 2rem;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .modal {
+    font-size: 1.6rem;
+  }
+}
+
+.noShow {
+  display: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
 @keyframes moveToDown {
   0% {
     opacity: 0;
